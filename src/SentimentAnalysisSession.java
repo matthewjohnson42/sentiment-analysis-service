@@ -1,19 +1,17 @@
+import java.io.FileNotFoundException;
+import java.io.IOException;
+/**
+* A class that represents a session in which the sentiment of a given text is ascertained.
+*/
 public class SentimentAnalysisSession{
-	private TextRepresentation representation;
-	private TextParser parser;
-	public SentimentAnalysisSession(TextParser parser){
-		this.parser = parser;
-	}
-	public void setParser(TextParser parser){
-		this.parser = parser;
-	}
-	public TextRepresentation getRepresentation(){
-		return representation;
-	}
-	public TextParser getParser(){
-		return parser;
-	}
-	public void runSession(){
-		representation = parser.parseFile();
+	public static void main(String[] args){
+		try{
+			SentiWordNetSimpleParser swnParser = new SentiWordNetSimpleParser("C:\\1020.log");
+			swnParser.parseFile();
+		} catch (FileNotFoundException ex){
+			System.out.println(ex.toString());
+		} catch (IOException ex){
+			System.out.println(ex.toString());
+		}
 	}
 }
