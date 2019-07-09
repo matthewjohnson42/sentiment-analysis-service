@@ -1,5 +1,3 @@
-This is a repository for my experimentation with sentiment analysis.
+This is a repository for a web service whose goal is to provide access to sentiment analysis computations.
 
-There is a paper that is ongoing in its development, and code that experiments with what I have learned.
-
-The code here is mostly written in Java, as my interest is to get into professional Java development.
+As you can see, it is very sparsely populated right now.
