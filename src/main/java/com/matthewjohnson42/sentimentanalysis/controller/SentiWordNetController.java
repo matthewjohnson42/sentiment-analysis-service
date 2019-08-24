@@ -23,7 +23,7 @@ public class SentiWordNetController {
      * An endpoint that does a simple sentiment scoring of a given character string.
      * Uses the Porter Stemmer to strip word suffixes, and uses a naive reference to SentiWordNet to attribute
      * sentiment scores to each of the stemmed words. The response contains the average positive and negative sentiment
-     * score of the words of the input string.
+     * value of the words of the input string.
      * @param requestBody A String representing the text to be parsed.
      * @return an object describing the average positive and negative sentiment values of the input string.
      */
@@ -35,8 +35,8 @@ public class SentiWordNetController {
     /**
      * An endpoint that does a simple sentiment scoring of a given character string.
      * Uses the Porter Stemmer to strip word suffixes, and uses a naive reference to SentiWordNet to attribute
-     * sentiment scores to each of the stemmed words. The response contains the sum of the positive and negative
-     * sentiment scores of all words in the input string.
+     * sentiment scores to each of the stemmed words. The response is computed by summing the negative and positive
+     * sentiment values of each word, and then summing the combined value across all words.
      * @param requestBody A String representing the text to be parsed.
      * @return an object describing sum of positive and negative sentiment scores for all words in the input.
      */
@@ -48,7 +48,7 @@ public class SentiWordNetController {
     /**
      * An endpoint that does a simple sentiment scoring of a given character string.
      * Uses the Porter Stemmer to strip word suffixes, and uses a naive reference to SentiWordNet to attribute
-     * sentiment scores to each of the stemmed words. The response contains the average sum of the positive and
+     * sentiment scores to each of the stemmed words. The response contains the average of the sum of the positive and
      * negative sentiment scores for each word in the input string.
      * @param requestBody A String representing the text to be parsed.
      * @return an object describing the average sentiment score of the words in the input string/
