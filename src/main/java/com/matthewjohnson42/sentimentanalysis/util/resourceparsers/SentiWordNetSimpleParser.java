@@ -9,6 +9,7 @@ import org.springframework.core.io.Resource;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -22,12 +23,13 @@ public class SentiWordNetSimpleParser {
 	private static final Logger log = LoggerFactory.getLogger(SentiWordNetSimpleParser.class);
 
 	/**
-	* Read in the reference file.
+	* Read in the resource.
 	*/
-	public static SimpleSentiWordNet readResource(Resource resourceFile) {
+	public static SimpleSentiWordNet readResource(Resource resource) {
+		log.info("Beginning parse of SentiWordNet resource");
 		HashMap<String, SimpleSWNWord> wordMap = new HashMap<>();
 		try{
-			BufferedReader reader = new BufferedReader(new FileReader(resourceFile.getFile()));
+			BufferedReader reader = new BufferedReader(new InputStreamReader(resource.getInputStream()));
 			String line = reader.readLine();
 			while (line != null) {
 				String[] lineParts = line.split("\t");
@@ -50,8 +52,10 @@ public class SentiWordNetSimpleParser {
 				line = reader.readLine();
 			}
 		} catch (IOException e) {
-			log.error("failed to parse the senti word net file");
+			log.error("failed to parse the senti word net file", e);
 		}
-		return new SimpleSentiWordNet().setLexicon(wordMap);
+		SimpleSentiWordNet sentiWordNet = new SimpleSentiWordNet().setLexicon(wordMap);
+		log.info("Completed parse of SentiWordNet resource");
+		return sentiWordNet;
 	}
 }

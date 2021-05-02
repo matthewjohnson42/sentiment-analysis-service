@@ -1,20 +1,24 @@
 buildscript {
-    dependencies {
-
-    }
+    dependencies { }
     repositories {
         mavenCentral()
     }
 }
 
 plugins {
-    id 'java'
+    id 'application'
     id 'io.spring.dependency-management' version '1.0.7.RELEASE'
-    id 'org.springframework.boot' version '2.0.5.RELEASE'
+    id 'org.springframework.boot' version '2.4.4'
 }
 
-springBoot {
-    mainClassName = 'com.matthewjohnson42.sentimentanalysis.SentimentAnalysisServiceApplication'
+application {
+    mainClass = 'com.matthewjohnson42.sentimentanalysis.SentimentAnalysisServiceApplication'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
 }
 
 repositories {
@@ -22,6 +26,6 @@ repositories {
 }
 
 dependencies {
-    compile 'org.springframework.boot:spring-boot-starter-web'
-    compile group: 'commons-codec', name: 'commons-codec', version: '1.9'
+    implementation( 'org.springframework.boot:spring-boot-starter-web' )
+    implementation( group: 'commons-codec', name: 'commons-codec', version: '1.9' )
 }

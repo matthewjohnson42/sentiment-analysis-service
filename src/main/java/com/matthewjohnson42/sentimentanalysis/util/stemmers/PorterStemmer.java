@@ -1,5 +1,8 @@
 package com.matthewjohnson42.sentimentanalysis.util.stemmers;
 
+/**
+ * Taken from https://tartarus.org/martin/PorterStemmer/java.txt
+ */
 
 /*
 
@@ -35,8 +38,6 @@ package com.matthewjohnson42.sentimentanalysis.util.stemmers;
 
 */
 
-import java.io.*;
-
 /**
  * Stemmer, implementing the Porter Stemming Algorithm
  *
@@ -44,7 +45,6 @@ import java.io.*;
  * word can be provided a character at time (by calling add()), or at once
  * by calling one of the various stem(something) methods.
  */
-
 public class PorterStemmer {
     private char[] b;
     private int i,     /* offset into b */
