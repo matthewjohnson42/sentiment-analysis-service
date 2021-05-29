@@ -2,9 +2,9 @@ package com.matthewjohnson42.sentimentanalysis.service;
 
 import com.matthewjohnson42.sentimentanalysis.data.lexicon.SimpleSentiWordNet;
 import com.matthewjohnson42.sentimentanalysis.data.wordrep.SimpleSWNWord;
-import com.matthewjohnson42.sentimentanalysis.dto.SimpleSWNAvgResponseDTO;
-import com.matthewjohnson42.sentimentanalysis.dto.SimpleSWNResponseDTO;
-import com.matthewjohnson42.sentimentanalysis.dto.SimpleSWNSumResponseDTO;
+import com.matthewjohnson42.sentimentanalysis.data.dto.SimpleSWNAvgResponseDTO;
+import com.matthewjohnson42.sentimentanalysis.data.dto.SimpleSWNResponseDTO;
+import com.matthewjohnson42.sentimentanalysis.data.dto.SimpleSWNSumResponseDTO;
 import com.matthewjohnson42.sentimentanalysis.util.stemmers.PorterStemmer;
 import com.matthewjohnson42.sentimentanalysis.util.stopwordfilters.StopWordFilter;
 import org.apache.commons.codec.digest.DigestUtils;

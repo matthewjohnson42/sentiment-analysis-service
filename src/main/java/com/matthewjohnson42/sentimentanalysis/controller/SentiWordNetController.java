@@ -1,8 +1,8 @@
 package com.matthewjohnson42.sentimentanalysis.controller;
 
-import com.matthewjohnson42.sentimentanalysis.dto.SimpleSWNAvgResponseDTO;
-import com.matthewjohnson42.sentimentanalysis.dto.SimpleSWNResponseDTO;
-import com.matthewjohnson42.sentimentanalysis.dto.SimpleSWNSumResponseDTO;
+import com.matthewjohnson42.sentimentanalysis.data.dto.SimpleSWNAvgResponseDTO;
+import com.matthewjohnson42.sentimentanalysis.data.dto.SimpleSWNResponseDTO;
+import com.matthewjohnson42.sentimentanalysis.data.dto.SimpleSWNSumResponseDTO;
 import com.matthewjohnson42.sentimentanalysis.service.SentiWordNetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.NonNull;

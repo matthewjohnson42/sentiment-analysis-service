@@ -1,4 +1,4 @@
-package com.matthewjohnson42.sentimentanalysis.dto;
+package com.matthewjohnson42.sentimentanalysis.data.dto;
 
 public class SimpleSWNSumResponseDTO {
 
