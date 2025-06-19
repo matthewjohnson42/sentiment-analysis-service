@@ -2,7 +2,11 @@
 
 A web service that is used for exposing sentiment analysis functionality via HTTP requests.
 
-Currently contains endpoints that expose basic sentiment analysis of String input. The endpoints utilize the [SentiWordNet](https://github.com/aesuli/SentiWordNet) sentiment lexicon to attribute sentiment scores to input strings using a number of different methods.
+### This repository is archived.
+
+## Repository content description
+
+The repository contains endpoints that expose basic sentiment analysis of String input. The endpoints utilize the [SentiWordNet](https://github.com/aesuli/SentiWordNet) sentiment lexicon to attribute sentiment scores to input strings using a number of different methods.
 
 Please note that these endpoints use methods that rely on the immediately apparent sentiment of the words of the input and the size of the input to provide accurate output. Short excerpts that are positive in nature but communicate that positivity using concepts may not be evaluated by the endpoints as being positive (eg: The Little Engine that Could).
 
