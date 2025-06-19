@@ -1,6 +1,6 @@
 # sentiment-analyis-service
 
-A web service that is used for exposing sentiment analysis functionality via HTTP requests.
+A web service providing sentiment analysis functions.
 
 ### This repository is archived.
 
